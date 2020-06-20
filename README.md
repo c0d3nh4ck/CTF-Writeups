@@ -2,4 +2,4 @@
 
 ## List of CTFs
 
-1. HSCTF 2020
+- [HSCTF 2020](https://github.com/hack-rohan/CTF-Writeups/tree/master/HSCTF%202020)
