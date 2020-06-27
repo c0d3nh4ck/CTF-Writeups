@@ -20,7 +20,7 @@ Type q to exit.
 flag{vm_1snt_s4f3_4ft3r_41l_29ka5sqD} 
 ```  
 
-I was using the same command as above previously but my mistake was this `{....return process.mainModule....}` as "mainModule" is not a property but a function of process and we need its return value to 	 call the function so it should be like this `{....return process")().mainModule....}`.
+I was using the same command as above previously but my mistake was this `{....return process.mainModule....}` as "mainModule" is not a property but a method of process and we need its return value to call the "mainModule" function so it should be like this `{....return process")().mainModule....}`.
 
 ## flag
 flag{vm_1snt_s4f3_4ft3r_41l_29ka5sqD}
