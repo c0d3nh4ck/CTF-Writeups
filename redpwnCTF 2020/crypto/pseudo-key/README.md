@@ -37,9 +37,10 @@ output -> ['r', 'r', 'q', 'p', 'w', 'w', 'w', 'n', 'p', 't', 's']
 
 
 - **matching the indices that are human readable**
+
 key - `redpwwwnctf`
 
-- **script to find the flag **
+- **script to find the flag**
 
 ```python
 ky = ["a"]*37
