@@ -1,0 +1,44 @@
+Ciphertext: z_jjaoo_rljlhr_gauf_twv_shaqzb_ljtyut
+Pseudo-key: iigesssaemk
+
+key - redpwwwnctf
+flag - flag{i_guess_pseudo_keys_are_pseudo_secure}
+
+
+---- to find key  -----
+
+for i in range(len(pk)):
+     for c in chr_to_num:
+         ky[i] = c
+         x = chr_to_num[ky[i]]
+         if num_to_chr[(2 * x) % 26] == pk[i]:
+             break
+
+output --- ['e', 'e', 'd', 'c', 'j', 'j', 'j', 'a', 'c', 'g', 'f']
+
+## there are many possible keys :- 
+	
+###		for example an a in the pseudo-key can correspond to an a in the actual key, as a = 0 and 0 * 2 = 0 (mod 26) or it could correspond to an n as n = 13 and 13 * 2 = 26 = 0 (mod 26)
+###		so for each actual key index there are two possibilities, the actual key is human-readable (i.e. should make sense, not a bunch of random chars)
+
+---- to find other pair just run this ----
+
+for i in range(11):
+     ky[i] = chr(ord(ky[i])+13)
+
+output --- ['r', 'r', 'q', 'p', 'w', 'w', 'w', 'n', 'p', 't', 's']
+
+## match the indexes that are human readable
+
+
+
+---- to find flag -----
+
+ky = ["a"]*37
+for i in range(len(ct)):
+	for c in chr_to_num:
+		ky[i] = c
+		x = chr_to_num[ky[i]]
+		m = encrypt(''.join(ky),key)
+		if m[i] == ct[i]:
+			break
